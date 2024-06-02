@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>武术动作识别项目介绍</title>
+    <title>项目介绍</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,6 +23,7 @@
         th, td {
             padding: 12px;
             text-align: left;
+            word-wrap: break-word;
         }
         th {
             background-color: #f2f2f2;
@@ -30,54 +31,73 @@
         a {
             color: #1a73e8;
         }
+        .pdf-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        .pdf-wrapper {
+            width: 100%;
+            max-width: 800px; /* 限制最大宽度 */
+        }
     </style>
 </head>
 <body>
-    <h1>项目能做到这个程度,是我们团队的共同努力.</h1>
-    <h2>项目简介</h2>
-    <p>这是一个武术动作检测与评价项目,目的在于为武术学习者带来便利,如果能为传播中国传统武术做一点贡献那是再好不过了.项目具体内容可以参考5m31d(2024年5月31日更新)分支的PPT.</p>
+    <div class="container">
+        <h1>项目能做到这个程度,是我们团队的共同努力.</h1>
+        <h2>项目简介</h2>
+        <p>这是一个武术动作检测与评价项目,目的在于为武术学习者带来便利,如果能为传播中国传统武术做一点贡献那是再好不过了.项目具体内容可以参考5m31d(2024年5月31日更新)分支的PPT.</p>
 
-    <h2>项目文件简介</h2>
-    <table>
-        <tr>
-            <th>文件名</th>
-            <th>功能描述</th>
-        </tr>
-        <tr>
-            <td>convert.py</td>
-            <td>将30帧视频转化为5帧视频</td>
-        </tr>
-        <tr>
-            <td>preprocessing.py</td>
-            <td>预处理数据, 使用mediapipe进行关节点识别</td>
-        </tr>
-        <tr>
-            <td>gcn_train.py</td>
-            <td>训练GCN模型</td>
-        </tr>
-        <tr>
-            <td>gcn_model.pth</td>
-            <td>GCN模型</td>
-        </tr>
-        <tr>
-            <td>application.py</td>
-            <td>使用本地视频文件或本地\网络摄像头检验效果</td>
-        </tr>
-        <tr>
-            <td>*.json</td>
-            <td>使用VIA工具标注的动作时间点数据文件</td>
-        </tr>
-        <tr>
-            <td>5月28日展示.pdf</td>
-            <td>项目展示文档</td>
-        </tr>
-    </table>
+        <h2>项目文件简介</h2>
+        <table>
+            <tr>
+                <th>文件名</th>
+                <th>功能描述</th>
+            </tr>
+            <tr>
+                <td>convert.py</td>
+                <td>将30帧视频转化为5帧视频</td>
+            </tr>
+            <tr>
+                <td>preprocessing.py</td>
+                <td>预处理数据, 使用mediapipe进行关节点识别</td>
+            </tr>
+            <tr>
+                <td>gcn_train.py</td>
+                <td>训练GCN模型</td>
+            </tr>
+            <tr>
+                <td>gcn_model.pth</td>
+                <td>GCN模型</td>
+            </tr>
+            <tr>
+                <td>application.py</td>
+                <td>使用本地视频文件或本地\网络摄像头检验效果</td>
+            </tr>
+            <tr>
+                <td>*.json</td>
+                <td>使用VIA工具标注的动作时间点数据文件</td>
+            </tr>
+            <tr>
+                <td>5月28日展示.pdf</td>
+                <td>项目展示文档</td>
+            </tr>
+        </table>
 
-    <h3>梅花拳数据集下载</h3>
-    <p><a href="https://pan.baidu.com/s/1XXM37C9kLqh1pUxj27gFeA?pwd=BCGH" target="_blank">百度网盘</a> 提取码：BCGH</p>
-    <div class="pdf-container">
-        <h3>项目展示文档</h3>
-        <iframe src="5月28日展示.pdf" width="70%" height="1300px"></iframe>
+        <h3>梅花拳数据集下载</h3>
+        <p><a href="https://pan.baidu.com/s/1XXM37C9kLqh1pUxj27gFeA?pwd=BCGH" target="_blank">百度网盘</a> 提取码：BCGH</p>
+
+        <div class="pdf-container">
+            <div class="pdf-wrapper">
+                <h3>项目展示文档</h3>
+                <embed src="5月28日展示.pdf" type="application/pdf" width="100%" height="800px" />
+            </div>
+        </div>
     </div>
 </body>
 </html>
